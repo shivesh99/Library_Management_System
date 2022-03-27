@@ -37,6 +37,8 @@ public class DriverLBMS {
 
         User ramu =new User(111,"Ramu");
         libraryService.addUser(ramu);
+        User ramu1 =new User(111,"Ramu");
+        libraryService.addUser(ramu1);
         libraryService.borrowBookItem(11,111);
         libraryService.borrowBookItem(21,111);
         libraryService.borrowBookItem(12,111);
@@ -54,6 +56,10 @@ public class DriverLBMS {
         libraryService.returnBook(23);
         libraryService.printBorrowed(111);
 
+        libraryService.removeBookItem(11);
+        libraryService.removeBookItem(13);
+
+
 //        Library Service started!!
 //                Created Library with size 5
 //        Book with barcode 11 added in Rack with rackId1
@@ -69,7 +75,8 @@ public class DriverLBMS {
 //        Book with barcode 24 added in Rack with rackId2
 //        Book with barcode 25 added in Rack with rackId2
 //        User with usedID 111 added in user database
-//        book item with barcode 11  issued to user with  111
+//        User is already present in user database!!
+//                book item with barcode 11  issued to user with  111
 //        book item with barcode 21  issued to user with  111
 //        book item with barcode 12  issued to user with  111
 //        Invalid barcode!!
@@ -80,6 +87,8 @@ public class DriverLBMS {
 //                Books issued for userId 111 are : 11 21 12 23 25
 //        Book with barcode 23 added in 1th Rack after getting returned by user with userID 111
 //        Books issued for userId 111 are : 11 21 12 25
+//        Book with barcode 11 issued to Ramu
+//        Book with barcode 13 removed from 1 th Rack
 
 
 

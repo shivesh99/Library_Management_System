@@ -2,6 +2,7 @@ package LBMS;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 public class User {
     private int Id ;
@@ -35,5 +36,18 @@ public class User {
 
     public void setBookList(List<BookItem> bookList) {
         this.bookList = bookList;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof User)) return false;
+        User user = (User) o;
+        return getId() == user.getId();
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getId());
     }
 }

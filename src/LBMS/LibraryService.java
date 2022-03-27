@@ -73,23 +73,29 @@ public class LibraryService {
     public void removeBookItem(int barcode){
 
         BookItem bookItem=bookItemMap.get(barcode);
-        if (bookItem!=null){
+        if (bookItem!=null && bookItem.getStatus()==BookStatus.AVAILABLE){
             Library lib =Library.getInstance();
             for(int j=0;j<lib.rackSize;j++){
                 if(rackList.get(j).getBookItems().contains(bookItem)){
                     rackList.get(j).getBookItems().remove(bookItem);
                     //bookItemMap.put(i,bookItem);
-                    System.out.println("Book with barcode"+barcode+"removed from"+(j+1)+"th Rack " );
+                    System.out.println("Book with barcode "+barcode+" removed from "+(j+1)+" th Rack " );
                     break;
                 }
             }
 
+        }else{
+            System.out.println("Book with barcode "+barcode+" issued to "+ bookItem.getOwner().getName() +" So cant remove now!!");
         }
 
     }
     public void addUser(User user){
-        userMap.put(user.getId(), user);
-        System.out.println("User with usedID "+user.getId() +" added in user database");
+        if(!userMap.containsValue(user)) {
+            userMap.put(user.getId(), user);
+            System.out.println("User with usedID " + user.getId() + " added in user database");
+        }else {
+            System.out.println("User is already present in user database!! ");
+        }
     }
 
     public void borrowBookItem(int barcode,int userId){
