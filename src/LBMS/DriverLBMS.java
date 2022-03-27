@@ -54,6 +54,33 @@ public class DriverLBMS {
         libraryService.returnBook(23);
         libraryService.printBorrowed(111);
 
+//        Library Service started!!
+//                Created Library with size 5
+//        Book with barcode 11 added in Rack with rackId1
+//        Book with barcode 12 added in Rack with rackId1
+//        Book with barcode 13 added in Rack with rackId1
+//        Book with barcode 14 added in Rack with rackId1
+//        Book with barcode 15 added in Rack with rackId1
+//        Book with barcode 16 added in Rack with rackId1
+//        Book with barcode 17 added in Rack with rackId1
+//        Book with barcode 21 added in Rack with rackId1
+//        Book with barcode 22 added in Rack with rackId1
+//        Book with barcode 23 added in Rack with rackId1
+//        Book with barcode 24 added in Rack with rackId2
+//        Book with barcode 25 added in Rack with rackId2
+//        User with usedID 111 added in user database
+//        book item with barcode 11  issued to user with  111
+//        book item with barcode 21  issued to user with  111
+//        book item with barcode 12  issued to user with  111
+//        Invalid barcode!!
+//                book item with barcode 23  issued to user with  111
+//        book item with barcode 25  issued to user with  111
+//        Books issued for userId 111 are : 11 21 12 23 25
+//        No book is present with barcode 31 in Library!!
+//                Books issued for userId 111 are : 11 21 12 23 25
+//        Book with barcode 23 added in 1th Rack after getting returned by user with userID 111
+//        Books issued for userId 111 are : 11 21 12 25
+
 
 
 
